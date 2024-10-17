@@ -3,37 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login e Painéis</title>
+    <title>Sistema de Login - Entregas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Tela de Login -->
+    <!-- Formulário de Login -->
     <div id="loginContainer">
-        <h1>Login</h1>
+        <h1>Login no Sistema</h1>
         <form id="loginForm">
             <input type="text" id="username" placeholder="Usuário" required>
             <input type="password" id="password" placeholder="Senha" required>
             <button type="submit">Entrar</button>
         </form>
-        <p id="loginMessage"></p> <!-- Mensagem de erro -->
+        <p id="loginMessage" style="color: red;"></p> <!-- Mensagem de erro -->
     </div>
 
-    <!-- Painel do Administrador -->
+    <!-- Painel do Administrador (aparece apenas para Admin) -->
     <div id="adminPanel" style="display: none;">
         <h2>Painel do Administrador</h2>
-        <button onclick="adicionarNovaEntrega()">Adicionar nova entrega</button>
-        <button onclick="visualizarEntregasPendentes()">Visualizar entregas pendentes</button>
-        <button onclick="visualizarTodasEntregas()">Visualizar todas as entregas</button>
-        <button onclick="alterarStatusEntrega()">Alterar status da entrega</button>
+        <button onclick="adicionarNovaEntrega()">Adicionar Nova Entrega</button>
+        <button onclick="visualizarEntregasPendentes()">Visualizar Entregas Pendentes</button>
+        <button onclick="visualizarTodasEntregas()">Visualizar Todas as Entregas</button>
+        <button onclick="alterarStatusEntrega()">Alterar Status da Entrega</button>
     </div>
 
-    <!-- Painel do Funcionário -->
+    <!-- Painel do Funcionário (aparece apenas para Funcionário) -->
     <div id="funcionarioPanel" style="display: none;">
         <h2>Painel do Funcionário</h2>
-        <button onclick="visualizarTodasEntregas()">Visualizar todas as entregas</button>
-        <button onclick="alterarStatusEntrega()">Alterar status da entrega</button>
+        <button onclick="visualizarTodasEntregas()">Visualizar Todas as Entregas</button>
+        <button onclick="alterarStatusEntrega()">Alterar Status da Entrega</button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Link para o JavaScript -->
 </body>
 </html>
