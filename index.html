@@ -3,40 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edson B. Transporte</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
+    <title>Login e Painéis</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Bem-vindo ao Sistema de Entregas! Edson B. Transportes</h1>
-        </header>
-        
-        <div id="loginContainer">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <input type="text" id="username" placeholder="Usuário" required>
-                <input type="password" id="password" placeholder="Senha" required>
-                <button type="submit">Entrar</button>
-            </form>
-            <p id="loginMessage" style="color: red;"></p>
-        </div>
-
-        <main>
-            <div id="funcionario" class="panel" style="display: none;">
-                <h2>Painel do Funcionário</h2>
-                <button onclick="visualizarTodasEntregas()">Visualizar todas as entregas</button>
-                <button onclick="alterarStatusEntrega()">Alterar status da entrega</button>
-                <button onclick="logout()">Sair</button>
-            </div>
-            <div id="admin" class="panel" style="display: none;">
-                <h2>Painel do Administrador</h2>
-                <button onclick="adicionarNovaEntrega()">Adicionar nova entrega</button>
-                <button onclick="visualizarEntregasPendentes()">Visualizar entregas pendentes</button>
-                <button onclick="logout()">Sair</button>
-            </div>
-        </main>
+    <!-- Tela de Login -->
+    <div id="loginContainer">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="loginMessage"></p> <!-- Mensagem de erro -->
     </div>
-    <script src="script.js"></script> <!-- Link para o JavaScript -->
+
+    <!-- Painel do Administrador -->
+    <div id="adminPanel" style="display: none;">
+        <h2>Painel do Administrador</h2>
+        <button onclick="adicionarNovaEntrega()">Adicionar nova entrega</button>
+        <button onclick="visualizarEntregasPendentes()">Visualizar entregas pendentes</button>
+        <button onclick="visualizarTodasEntregas()">Visualizar todas as entregas</button>
+        <button onclick="alterarStatusEntrega()">Alterar status da entrega</button>
+    </div>
+
+    <!-- Painel do Funcionário -->
+    <div id="funcionarioPanel" style="display: none;">
+        <h2>Painel do Funcionário</h2>
+        <button onclick="visualizarTodasEntregas()">Visualizar todas as entregas</button>
+        <button onclick="alterarStatusEntrega()">Alterar status da entrega</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
